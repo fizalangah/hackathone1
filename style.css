@@ -1,0 +1,265 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; 
+    background-color: #f9f9f9; 
+}
+
+/* Navigation styles */
+nav {
+    background-color: green;
+    color: white;
+    padding: 6px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Navigation button for small screens */
+.nav-toggle {
+    display: none;
+    background-color: rgba(31, 167, 31, 0.863); 
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Navigation links */
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px; 
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Toggle button for mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color:rgba(31, 167, 31, 0.863); 
+        padding: 10px;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}
+
+/* Center the content within the body */
+section,
+.resume-container,
+.form-section {
+    width: 100%;
+    max-width: 800px; 
+    margin: 20px auto; 
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Center the content within section and resume container */
+section {
+    text-align: center;
+}
+
+h1.main-heading {
+    color: green;
+    border-bottom: 2px solidrgba(31, 167, 31, 0.863); 
+    padding-bottom: 10px;
+}
+
+.form-section {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    font-weight: bold;
+    text-align: left; 
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea {
+    width: calc(100% - 20px); 
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+button.submit-btn {
+    background-color:rgba(31, 167, 31, 0.863); 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 20px;
+}
+
+button.submit-btn:hover {
+    background-color: rgba(31, 167, 31, 0.863); 
+}
+
+.hidden {
+    display: none;
+}
+
+/* Resume styling */
+.resume-container {
+    text-align: center; /* Center text and elements */
+    border: 2px solid #4a0746;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f5ebf5; 
+    padding: 20px; 
+    border-radius: 8px; 
+}
+
+.resume-header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.resume-section {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #9a8d99;
+}
+
+.resume-section h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.resume-output {
+    margin-top: 20px;
+}
+
+/* Skill button styling */
+.skill-btn {
+    background-color:rgba(31, 167, 31, 0.863);  
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 5px;
+}
+
+.skill-btn:hover {
+    background-color:rgba(31, 167, 31, 0.863); 
+}
+
+/* Edit Resume Button */
+button#edit-resume {
+    background-color:rgba(31, 167, 31, 0.863); 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 10px;
+}
+
+button#edit-resume:hover {
+    background-color:rgba(31, 167, 31, 0.863); 
+}
+
+/* Share Resume Button */
+button#share-resume {
+    background-color:rgba(31, 167, 31, 0.863); 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 10px;
+}
+
+button#share-resume:hover {
+    background-color: rgba(31, 167, 31, 0.863); 
+}
+
+/* Social Media Share Buttons */
+.share-button {
+    background-color: #1d72b8; /* Default for sharing buttons */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 5px;
+    transition: background-color 0.3s;
+}
+
+.share-button.whatsapp {
+    background-color: #25D366;
+}
+
+.share-button.twitter {
+    background-color: #1DA1F2;
+}
+
+.share-button:hover {
+    background-color: #155a8a;
+}
+
+.share-button.whatsapp:hover {
+    background-color: #1EBE6F;
+}
+
+.share-button.twitter:hover {
+    background-color: #0d95e8;
+}
