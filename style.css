@@ -153,7 +153,7 @@ button.submit-btn:hover {
 /* Resume styling */
 .resume-container {
     text-align: center; /* Center text and elements */
-    border: 2px solid #4a0746;
+    border: 2px solid rgba(31, 167, 31, 0.863);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: #f5ebf5; 
     padding: 20px; 
